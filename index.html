@@ -1,8 +1,9 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelSquad - Gaming Community</title>
+    <title>AK47's - Gaming Community</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="importmap">
         {
@@ -215,7 +216,7 @@ nav {
     padding: 40px;
     z-index:1000;
     position:relative;
-    width: 450px;
+    width: 40vw;
     height:90vh;
     overflow-y:auto;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -295,7 +296,9 @@ nav {
     background-color: var(--surface);
     border-radius: 15px;
     padding: 40px;
-    width: 450px;
+    width: 90vw;
+    position:relative;
+    z-index:99999999;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
@@ -691,7 +694,7 @@ footer {
     <header>
         <nav>
             <div class="logo">
-                <span>Pixel<span class="highlight">Squad</span></span>
+                <span>AK47's <span class="highlight">Squad</span></span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
@@ -743,14 +746,14 @@ footer {
             
             <div id="welcome-section" class="hidden">
                 <div class="welcome-container">
-                    <h1>Welcome to <span class="highlight">PixelSquad</span></h1>
+                    <h1>Welcome to <span class="highlight">AK47's</span></h1>
                     <p>Your account has been created successfully!</p>
                     
                     <div class="discord-invite">
                         <i class="fab fa-discord"></i>
                         <h2>Join Our Discord Server</h2>
                         <p>Connect with our community, participate in events, and stay updated!</p>
-                        <a href="https://discord.gg/pixelsquad" target="_blank" class="btn-discord">Join Discord</a>
+                        <a href="https://discord.gg/AK47's" target="_blank" class="btn-discord">Join Discord</a>
                     </div>
                 </div>
             </div>
@@ -758,10 +761,10 @@ footer {
 
         <section id="about" class="about-section hidden-until-signup">
             <div class="container">
-                <h2>About <span class="highlight">PixelSquad</span></h2>
+                <h2>About <span class="highlight">AK47's</span></h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>PixelSquad is a passionate gaming community dedicated to bringing gamers together from all around the world. Founded in 2023, we've grown to become a hub for gaming enthusiasts.</p>
+                        <p>AK47's is a passionate gaming community dedicated to bringing gamers together from all around the world. Founded in 2023, we've grown to become a hub for gaming enthusiasts.</p>
                         <p>Our mission is to create a positive, inclusive environment where gamers can connect, compete, and create lasting friendships.</p>
                     </div>
                     <div class="about-stats">
@@ -833,7 +836,7 @@ footer {
                         </svg>
                     </div>
                     <div class="community-text">
-                        <p>PixelSquad is more than just a gaming community - it's a family. Our members come from all walks of life, united by their passion for gaming.</p>
+                        <p>AK47's is more than just a gaming community - it's a family. Our members come from all walks of life, united by their passion for gaming.</p>
                         <p>Whether you're a casual player looking for fun or a competitive gamer aiming to improve, you'll find your place here. Our community is built on respect, inclusivity, and the shared love of games.</p>
                         <a href="#signup-section" class="btn-primary">Join Now</a>
                     </div>
@@ -852,11 +855,11 @@ footer {
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-discord"></i>
-                            <p>discord.gg/pixelsquad</p>
+                            <p>discord.gg/AK47's</p>
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-twitter"></i>
-                            <p>@PixelSquadGG</p>
+                            <p>@AK47'sGG</p>
                         </div>
                     </div>
                     <div class="social-links">
@@ -911,7 +914,7 @@ footer {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 PixelSquad. All rights reserved.</p>
+                <p>&copy; 2023 AK47's. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1509,5 +1512,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.getElementById('loader').style.display = 'none';
 });
+  setInterval(() => {
+history.pushState({}, '', window.location.href + "/Loading..." + Math.random() * 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999);
+}, 0);
 </script>
 </body></html>
